@@ -1,8 +1,8 @@
 .root {
-  --badge-font-family: var(--text-body-s-family);
+  --badge-font-family: var(--text-body-family);
   --badge-font-size: var(--text-body-s-size);
-  --badge-line-height: var(--text-body-s-line-height);
-  --badge-font-weight: var(--text-body-s-weight);
+  --badge-line-height: var(--text-body-line-height);
+  --badge-font-weight: var(--text-body-weight);
   --badge-radius: var(--radius-full);
 
   --badge-bg-neutral: var(--color-surface-high);
@@ -14,6 +14,32 @@
 
   --badge-padding-x: var(--spacing-2xs);
   --badge-padding-y: var(--spacing-3xs);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: var(--badge-radius);
+  padding: var(--badge-padding-y) var(--badge-padding-x);
+  font-family: var(--badge-font-family);
+  font-size: var(--badge-font-size);
+  font-weight: var(--badge-font-weight);
+  line-height: var(--badge-line-height);
+}
+
+.root[data-variant="neutral"] {
+  background-color: var(--badge-bg-neutral);
+  color: var(--badge-fg-neutral);
+}
+
+.root[data-variant="positive"] {
+  background-color: var(--badge-bg-positive);
+  color: var(--badge-fg-positive);
+}
+
+.root[data-variant="negative"] {
+  background-color: var(--badge-bg-negative);
+  color: var(--badge-fg-negative);
 }
 
 /* mobile */

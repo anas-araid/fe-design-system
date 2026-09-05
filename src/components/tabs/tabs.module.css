@@ -1,8 +1,8 @@
 .root {
-  --tab-font-family: var(--text-body-m-family);
+  --tab-font-family: var(--text-body-family);
   --tab-font-size: var(--text-body-m-size);
-  --tab-line-height: var(--text-body-m-line-height);
-  --tab-font-weight: var(--text-body-m-weight);
+  --tab-line-height: var(--text-body-line-height);
+  --tab-font-weight: var(--text-body-weight);
   --tab-radius: var(--radius-full);
 
   --tab-bg-selected: var(--color-surface-inverse);
