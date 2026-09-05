@@ -1,0 +1,8 @@
+/**
+ * Entry point dei token del design system.
+ * I token di componente non stanno qui: vivono nel module del componente
+ * (layer 3), così non finiscono su :root e si spediscono solo se usati.
+ */
+
+@import "./primitives.css";
+@import "./semantic.css";

@@ -1,0 +1,25 @@
+.root {
+  --badge-font-family: var(--text-body-s-family);
+  --badge-font-size: var(--text-body-s-size);
+  --badge-line-height: var(--text-body-s-line-height);
+  --badge-font-weight: var(--text-body-s-weight);
+  --badge-radius: var(--radius-full);
+
+  --badge-bg-neutral: var(--color-surface-high);
+  --badge-fg-neutral: var(--color-text-on-neutral);
+  --badge-bg-positive: var(--color-surface-positive);
+  --badge-fg-positive: var(--color-text-on-neutral);
+  --badge-bg-negative: var(--color-surface-negative);
+  --badge-fg-negative: var(--color-text-on-neutral);
+
+  --badge-padding-x: var(--spacing-2xs);
+  --badge-padding-y: var(--spacing-3xs);
+}
+
+/* mobile */
+@media (max-width: 30rem) {
+  .root {
+    --badge-padding-x: var(--spacing-3xs);
+    --badge-padding-y: var(--spacing-4xs);
+  }
+}

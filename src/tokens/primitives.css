@@ -1,0 +1,50 @@
+/**
+ * Layer 1 — Primitive.
+ *
+ * Valori grezzi, senza nessun significato d'uso: nomi per tinta e per posizione
+ * nella scala, mai per ruolo. Nessun var() qui dentro.
+ * Il significato viene assegnato in semantic.css.
+ */
+
+:root {
+  --spacing-0: 0rem; /* 0px */
+  --spacing-4xs: 0.125rem; /* 2px */
+  --spacing-3xs: 0.25rem; /* 4px */
+  --spacing-2xs: 0.5rem; /* 8px */
+  --spacing-xs: 0.75rem; /* 12px */
+  --spacing-s: 1rem; /* 16px */
+  --spacing-m: 1.25rem; /* 20px */
+  --spacing-l: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+
+  --color-white: #ffffff;
+
+  --color-navy-900: #1b2134;
+  --color-navy-800: #343a4e;
+  --color-navy-700: #585d71;
+
+  --color-gray-50: #f6f6fa;
+  --color-gray-100: #f1f1f7;
+  --color-gray-300: #d3d3dc;
+  --color-gray-400: #c4c5cf;
+
+  --color-green-200: #b1ffc7;
+  --color-red-200: #ffbfb1;
+  --color-blue-600: #005fcc;
+
+  --font-family-sans: "Inter", system-ui, sans-serif;
+
+  --font-size-100: 0.75rem; /* 12px */
+  --font-size-200: 0.875rem; /* 14px */
+
+  --font-weight-bold: 700;
+
+  --line-height-normal: 1.5;
+
+  --border-width-thin: 0.125rem; /* 2px */
+  --radius-full: 62.5rem;
+
+  --duration-fast: 150ms;
+  --easing-default: ease;
+}

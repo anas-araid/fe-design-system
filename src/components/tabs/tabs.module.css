@@ -1,0 +1,41 @@
+.root {
+  --tab-font-family: var(--text-body-m-family);
+  --tab-font-size: var(--text-body-m-size);
+  --tab-line-height: var(--text-body-m-line-height);
+  --tab-font-weight: var(--text-body-m-weight);
+  --tab-radius: var(--radius-full);
+
+  --tab-bg-selected: var(--color-surface-inverse);
+  --tab-bg-selected-hover: var(--color-surface-inverse-hover);
+  --tab-bg-selected-active: var(--color-surface-inverse-active);
+  --tab-fg-selected: var(--color-text-on-inverse);
+
+  --tab-bg-unselected: transparent;
+  --tab-bg-unselected-hover: var(--color-surface-hover);
+  --tab-bg-unselected-active: var(--color-surface-active);
+  --tab-fg-unselected: var(--color-text-on-neutral);
+
+  --tab-border-unselected: var(--color-border-default);
+  --tab-border-unselected-hover: var(--color-border-hover);
+
+  --tab-underline-color: var(--color-surface-inverse);
+  --tab-underline-width: var(--border-width-thin);
+
+  --tab-transition-duration: var(--duration-fast);
+  --tab-transition-easing: var(--easing-default);
+
+  --tab-height: 3.125rem; /* 50px */
+  --tab-padding-x: var(--spacing-s);
+  --tab-gap: var(--spacing-xs);
+  --tab-gap-underline: var(--spacing-xl);
+}
+
+/* mobile */
+@media (max-width: 30rem) {
+  .root {
+    --tab-height: 2.625rem; /* 42px */
+    --tab-padding-x: var(--spacing-xs);
+    --tab-gap: var(--spacing-2xs);
+    --tab-gap-underline: var(--spacing-l);
+  }
+}
