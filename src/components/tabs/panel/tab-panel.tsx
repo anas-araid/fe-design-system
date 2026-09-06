@@ -16,6 +16,7 @@ export function TabPanel({ value, ref, ...rest }: TabPanelProps) {
       id={panelId(baseId, value)}
       aria-labelledby={tabId(baseId, value)}
       hidden={!isActive}
+      tabIndex={0}
       {...rest}
     />
   );
