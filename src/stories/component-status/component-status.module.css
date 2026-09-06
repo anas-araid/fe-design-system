@@ -1,0 +1,42 @@
+.root {
+  --status-table-border: var(--color-gray-300);
+  --status-table-header-bg: var(--color-gray-50);
+  --status-table-row-hover: var(--color-gray-50);
+
+  border: var(--border-width-small) solid var(--status-table-border);
+  border-collapse: collapse;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-200);
+  overflow: hidden;
+  width: 100%;
+}
+
+.header-cell {
+  background-color: var(--status-table-header-bg);
+  border-bottom: var(--border-width-small) solid var(--status-table-border);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-2xs) var(--spacing-s);
+  text-align: left;
+}
+
+.row:hover {
+  background-color: var(--status-table-row-hover);
+}
+
+.cell {
+  padding: var(--spacing-2xs) var(--spacing-s);
+  vertical-align: middle;
+}
+
+.row:not(:last-child) .cell {
+  border-bottom: var(--border-width-small) solid var(--status-table-border);
+}
+
+.link {
+  color: inherit;
+  font-weight: normal;
+}
+
+.notes {
+  color: var(--color-navy-700);
+}

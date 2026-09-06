@@ -1,0 +1,21 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { ComponentStatusTable } from "./component-status-table";
+
+<Meta title="Component Status" />
+
+# Component Status
+
+Dashboard to understand the current status of each component in the Design System.
+
+### Legend
+
+- `✅ Up to date`
+  - The component is aligned with the latest design and technical decisions. Safe to use.
+- `🛠️ Update required`
+  - The component needs technical or visual updates. Still valid and usable in the meantime.
+- `❌ Missing`
+  - The component has been approved or designed but is not yet ready for use.
+
+<br />
+
+<ComponentStatusTable />
