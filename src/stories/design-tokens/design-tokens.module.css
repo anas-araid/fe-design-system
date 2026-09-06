@@ -1,0 +1,132 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-s);
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xs);
+}
+
+.swatch-color {
+  border: var(--border-width-small) solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  height: var(--spacing-2xl);
+}
+
+.swatch-name {
+  font-size: var(--font-size-100);
+  font-weight: var(--font-weight-bold);
+}
+
+.swatch-value {
+  color: var(--color-navy-700);
+  font-size: var(--font-size-100);
+}
+
+.spacing-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xs);
+}
+
+.spacing-row {
+  align-items: center;
+  display: grid;
+  gap: var(--spacing-s);
+  grid-template-columns: 6rem 1fr 4rem;
+}
+
+.spacing-bar {
+  background-color: var(--color-surface-inverse);
+  border-radius: var(--radius-sm);
+  height: var(--spacing-m);
+}
+
+.spacing-value {
+  color: var(--color-navy-700);
+  font-size: var(--font-size-100);
+  text-align: right;
+}
+
+.type-family {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-200);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+}
+
+.type-size-sample {
+  font-family: var(--font-family-sans);
+}
+
+.type-size-sample[data-size="100"] {
+  font-size: var(--font-size-100);
+}
+
+.type-size-sample[data-size="200"] {
+  font-size: var(--font-size-200);
+}
+
+.token-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.token-row {
+  align-items: baseline;
+  display: grid;
+  gap: var(--spacing-s);
+  grid-template-columns: 10rem 1fr 10rem;
+}
+
+.token-name {
+  font-size: var(--font-size-100);
+  font-weight: var(--font-weight-bold);
+}
+
+.token-value {
+  color: var(--color-navy-700);
+  font-size: var(--font-size-100);
+}
+
+.token-alias {
+  color: var(--color-navy-700);
+  font-size: var(--font-size-100);
+  text-align: right;
+}
+
+/* mobile */
+@media (max-width: 30rem) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  }
+
+  .spacing-row,
+  .token-row {
+    grid-template-columns: 5rem 1fr;
+  }
+
+  .spacing-value,
+  .token-alias {
+    text-align: left;
+  }
+}

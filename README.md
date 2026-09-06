@@ -1,27 +1,33 @@
-# Frontend Interview - Design System
+<p align="center">
+  <img src=".storybook/brand/assets/prima-logo.svg" alt="Prima" width="140" />
+</p>
 
-Hey 👋
+A shared set of UI components for Prima's web products, built with React and documented in Storybook.
 
-This is the base repository for the home test. The repository is created with `vite` and is empty, but contains some packages already installed, in particular:
+## Components
 
-- `react`
-- `storybook`
-- `vitest`
+- Tabs
+- Badge
+
+Each component is documented in Storybook, together with its variants and current status.
 
 ## Install and run
 
 ```bash
 # Install dependencies
-# This project use `pnpm` as package manager, but you can use also `npm` or `yarn`.
+# This project uses pnpm, but npm or yarn also work.
 pnpm install
 
-# And run the project
+# Start the app
 pnpm dev
 
-# Optional: Run Storybook
+# Run Storybook
 pnpm storybook
+
+# Run tests
+pnpm test
 ```
 
 ## Figma file
 
-The figma file of the home test is available [here](https://www.figma.com/design/OclakAGLSXDoMKLFvwLNMP/%F0%9F%92%BB-Design-System-Home-Test---Tabs-Component?node-id=0-1&t=4pG7NN6HKxgxroDz-1).
+The Figma file is available [here](https://www.figma.com/design/OclakAGLSXDoMKLFvwLNMP/%F0%9F%92%BB-Design-System-Home-Test---Tabs-Component?node-id=0-1&t=4pG7NN6HKxgxroDz-1).

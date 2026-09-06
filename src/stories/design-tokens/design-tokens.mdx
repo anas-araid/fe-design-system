@@ -1,0 +1,28 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { ColorPalette, SemanticAliases, SpacingScale, TypographySpecimen } from "./design-tokens";
+
+<Meta title="Design Tokens" />
+
+# Design Tokens
+
+Design tokens currently defined in the Design System: primitive colors, spacing, typography, and
+the semantic aliases components actually consume.
+
+## Colors
+
+<ColorPalette />
+
+## Spacing
+
+<SpacingScale />
+
+## Typography
+
+<TypographySpecimen />
+
+## Semantic Aliases
+
+Tokens that components reference directly (e.g. `Badge`, `Tabs`), each pointing to one of the
+primitive tokens above.
+
+<SemanticAliases />
