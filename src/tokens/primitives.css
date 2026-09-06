@@ -1,11 +1,3 @@
-/**
- * Layer 1 — Primitive.
- *
- * Valori grezzi, senza nessun significato d'uso: nomi per tinta e per posizione
- * nella scala, mai per ruolo. Nessun var() qui dentro.
- * Il significato viene assegnato in semantic.css.
- */
-
 :root {
   --spacing-0: 0rem; /* 0px */
   --spacing-4xs: 0.125rem; /* 2px */
@@ -31,7 +23,6 @@
 
   --color-green-200: #b1ffc7;
   --color-red-200: #ffbfb1;
-  --color-blue-600: #005fcc;
 
   --font-family-sans: "Inter", system-ui, sans-serif;
 
@@ -42,7 +33,10 @@
 
   --line-height-normal: 1.5;
 
-  --border-width-thin: 0.125rem; /* 2px */
+  --border-width-small: 0.0625rem; /* 1px */
+  --border-width-medium: 0.125rem; /* 2px */
+  --border-width-large: 0.1875rem; /* 3px */
+  --radius-sm: 0.25rem; /* 4px */
   --radius-full: 62.5rem;
 
   --duration-fast: 150ms;

@@ -19,23 +19,132 @@
   --tab-border-unselected-hover: var(--color-border-hover);
 
   --tab-underline-color: var(--color-surface-inverse);
-  --tab-underline-width: var(--border-width-thin);
+  --tab-underline-width: var(--border-width-large);
+  --tab-underline-radius: var(--radius-sm);
 
   --tab-transition-duration: var(--duration-fast);
   --tab-transition-easing: var(--easing-default);
 
-  --tab-height: 3.125rem; /* 50px */
+  /* 50px */
+  --tab-height: 3.125rem;
   --tab-padding-x: var(--spacing-s);
   --tab-gap: var(--spacing-xs);
   --tab-gap-underline: var(--spacing-xl);
+
+  --tab-badge-gap: var(--spacing-2xs);
+  --tabs-panel-gap: var(--spacing-m);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--tabs-panel-gap);
 }
 
 /* mobile */
 @media (max-width: 30rem) {
   .root {
-    --tab-height: 2.625rem; /* 42px */
+    /* 42px */
+    --tab-height: 2.625rem;
     --tab-padding-x: var(--spacing-xs);
     --tab-gap: var(--spacing-2xs);
     --tab-gap-underline: var(--spacing-l);
   }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* prevent focus-ring from being clipped */
+  padding: calc(var(--focus-ring-width) + var(--focus-ring-offset));
+}
+
+.list[data-variant="pill"] {
+  gap: var(--tab-gap);
+}
+
+.list[data-variant="underline"] {
+  gap: var(--tab-gap-underline);
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--tab-badge-gap);
+  flex-shrink: 0;
+  height: var(--tab-height);
+  border: none;
+  background-color: var(--tab-bg-unselected);
+  color: var(--tab-fg-unselected);
+  font-family: var(--tab-font-family);
+  font-size: var(--tab-font-size);
+  font-weight: var(--tab-font-weight);
+  line-height: var(--tab-line-height);
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--tab-transition-duration) var(--tab-transition-easing),
+    border-color var(--tab-transition-duration) var(--tab-transition-easing);
+}
+
+.tab:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.list[data-variant="pill"] .tab {
+  padding-inline: var(--tab-padding-x);
+  border-radius: var(--tab-radius);
+  border: var(--border-width-small) solid transparent;
+}
+
+.list[data-variant="pill"] .tab[aria-selected="false"] {
+  border-color: var(--tab-border-unselected);
+}
+
+.list[data-variant="pill"] .tab[aria-selected="false"]:hover {
+  border-color: var(--tab-border-unselected-hover);
+}
+
+.list[data-variant="pill"] .tab[aria-selected="false"]:active {
+  background-color: var(--tab-bg-unselected-active);
+}
+
+.list[data-variant="pill"] .tab[aria-selected="true"] {
+  background-color: var(--tab-bg-selected);
+  color: var(--tab-fg-selected);
+}
+
+.list[data-variant="pill"] .tab[aria-selected="true"]:hover {
+  background-color: var(--tab-bg-selected-hover);
+}
+
+.list[data-variant="pill"] .tab[aria-selected="true"]:active {
+  background-color: var(--tab-bg-selected-active);
+}
+
+.list[data-variant="underline"] .tab {
+  position: relative;
+  border-radius: var(--tab-underline-radius);
+}
+
+.list[data-variant="underline"] .tab::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: var(--tab-underline-width);
+  border-radius: var(--radius-full);
+  background-color: transparent;
+  transition: background-color var(--tab-transition-duration) var(--tab-transition-easing);
+}
+
+.list[data-variant="underline"] .tab[aria-selected="false"]:hover::after,
+.list[data-variant="underline"] .tab[aria-selected="false"]:active::after {
+  background-color: var(--tab-border-unselected-hover);
+}
+
+.list[data-variant="underline"] .tab[aria-selected="true"]::after {
+  background-color: var(--tab-underline-color);
 }

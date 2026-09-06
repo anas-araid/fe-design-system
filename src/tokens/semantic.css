@@ -14,26 +14,25 @@
   /* figma: SurfacePositive */
   --color-surface-positive: var(--color-green-200);
   /* figma: SurfaceNegative */
-  --color-surface-negative: var(--color-red-200); 
+  --color-surface-negative: var(--color-red-200);
   /* figma: OnInverse */
-  --color-text-on-inverse: var(--color-white); 
+  --color-text-on-inverse: var(--color-white);
   /* figma: OnNeutral */
   --color-text-on-neutral: var(--color-navy-900);
 
   /* figma: Outline */
-  --color-border-default: var(--color-gray-300); 
+  --color-border-default: var(--color-gray-300);
   /* figma: OutlineHover */
   --color-border-hover: var(--color-gray-400);
 
-  --focus-ring-color: var(--color-blue-600);
-  --focus-ring-width: var(--border-width-thin);
-  --focus-ring-offset: var(--border-width-thin);
+  --focus-ring-color: var(--color-surface-inverse);
+  --focus-ring-width: var(--border-width-medium);
+  --focus-ring-offset: var(--border-width-small);
 
   --text-body-family: var(--font-family-sans);
   --text-body-line-height: var(--line-height-normal);
   --text-body-weight: var(--font-weight-bold);
-  
+
   --text-body-m-size: var(--font-size-200);
   --text-body-s-size: var(--font-size-100);
-
 }
