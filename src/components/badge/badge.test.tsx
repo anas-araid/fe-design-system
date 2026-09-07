@@ -20,8 +20,5 @@ describe("Badge", () => {
 
     const badge = screen.getByText("Label");
     expect(badge).toHaveClass("custom");
-    // The CSS Module class is a generated hash: we only check it's still
-    // there alongside ours, without depending on its value.
-    // expect(badge.classList.length).toBeGreaterThan(1);
   });
 });

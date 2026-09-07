@@ -1,0 +1,66 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Components/Tabs/Usage" />
+
+# Using Tabs
+
+`Tabs` is a compound component: compose it from `Tabs.Root`, `Tabs.List`, `Tabs.Tab` and
+`Tabs.Panel`. `Root` holds the active tab and shares it with the other parts through context, so
+they can be nested and rearranged freely as long as each `Tab` and `Panel` share the same `value`.
+
+```tsx
+import { Tabs } from "../tabs";
+
+<Tabs.Root defaultValue="emails">
+  <Tabs.List aria-label="Sections">
+    <Tabs.Tab value="emails">Emails</Tabs.Tab>
+    <Tabs.Tab value="files">Files</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel value="emails">Emails content.</Tabs.Panel>
+  <Tabs.Panel value="files">Files content.</Tabs.Panel>
+</Tabs.Root>
+```
+
+## Controlled vs uncontrolled
+
+By default `Tabs.Root` is uncontrolled: it tracks the active tab itself, starting from
+`defaultValue`.
+
+```tsx
+<Tabs.Root defaultValue="emails">...</Tabs.Root>
+```
+
+To control the active tab from outside, pass `value` and `onValueChange` instead:
+
+```tsx
+const [active, setActive] = useState("emails");
+
+<Tabs.Root value={active} onValueChange={setActive}>
+  ...
+</Tabs.Root>
+```
+
+## Adding a badge to a tab
+
+There are two ways to put a `Badge` on a `Tab`.
+
+Import `Badge` and render it as a child of `Tabs.Tab`, next to the label:
+
+```tsx
+import { Badge } from "../badge";
+
+<Tabs.Tab value="files">
+  Files
+  <Badge variant="negative">3</Badge>
+</Tabs.Tab>
+```
+
+Use the `badge` prop:
+
+```tsx
+import type { BadgeProps } from "../badge";
+
+<Tabs.Tab value="files" badge={{ variant: "negative", children: "3" }}>
+  Files
+</Tabs.Tab>
+```

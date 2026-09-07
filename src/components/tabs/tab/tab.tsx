@@ -10,6 +10,13 @@ export interface TabProps extends Omit<ComponentPropsWithRef<"button">, "role"> 
   badge?: BadgeProps;
 }
 
+/**
+ * A single tab button. Clicking it makes the `Tabs.Panel` with the same
+ * `value` visible.
+ *
+ * @param value - Must match the `value` of the `Tabs.Panel` this tab controls.
+ * @param badge - Renders a `Badge` next to the label
+ */
 export function Tab({ value, badge, children, className, onClick, ref, ...rest }: TabProps) {
   const { value: activeValue, selectTab, baseId } = useTabsContext();
   const isSelected = activeValue === value;

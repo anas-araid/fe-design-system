@@ -11,6 +11,16 @@ A shared set of UI components for Prima's web products, built with React and doc
 
 Each component is documented in Storybook, together with its variants and current status.
 
+## Project structure
+
+```
+src/
+  components/   Tabs and Badge, each with its own styles, tests and stories
+  hooks/        Shared hook
+  tokens/       CSS design tokens
+  stories/      Storybook-only docs
+```
+
 ## Install and run
 
 ```bash

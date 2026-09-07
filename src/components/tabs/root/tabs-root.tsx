@@ -13,6 +13,14 @@ export interface TabsProps extends ComponentPropsWithRef<"div"> {
   variant?: TabsVariant;
 }
 
+/**
+ * Root of the Tabs compound component.
+ *
+ * @param value - Active tab, for controlled usage. Pair it with `onValueChange`.
+ * @param defaultValue - Initial active tab, for uncontrolled usage.
+ * @param onValueChange - Called with the new value whenever the active tab changes.
+ * @param variant - Visual style of the tab list. Defaults to `"pill"`.
+ */
 export function TabsRoot({
   value,
   defaultValue,
